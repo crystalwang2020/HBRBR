@@ -1,0 +1,50 @@
+# Atomic File Format
+field_separator: "\t"
+seq_separator: " "
+
+# Common Features
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: job_id
+#RATING_FIELD: rating
+#TIME_FIELD: timestamp
+DIRECT_FIELD: direct
+seq_len: ~
+# Label for Point-wise DataLoader
+LABEL_FIELD: label
+threshold:
+    label: 0.5
+# NegSample Prefix for Pair-wise DataLoader
+NEG_PREFIX: neg_
+# Text Model Needed
+#USER_DOC_FIELD: user_doc
+#ITEM_DOC_FIELD: job_doc
+
+# Selectively Loading
+load_col:
+    inter: [user_id, job_id, direct, label]
+    user: [user_id,metric0,metric1,metric2,metric3,metric4,metric5,metric6,metric7,metric8,metric9,metric10,metric11,metric12,metric13,metric14,metric15,metric16,metric17,metric18,metric19,metric20,metric21,metric22,metric23,metric24,metric25,metric26,metric27,metric28,metric29]
+
+#    user: [user_id, live_city_id, desire_jd_salary_id, cur_salary_id, cur_degree_id, birthday, start_work_date]
+    item: [job_id,metric0,metric1,metric2,metric3,metric4,metric5,metric6,metric7,metric8,metric9,metric10,metric11,metric12,metric13,metric14,metric15,metric16]
+      #    item: [job_id, city, require_nums, max_salary, min_salary, start_date, end_date, is_travel]
+    udoc: [user_id, user_doc]
+    idoc: [job_id, job_doc]
+unload_col: ~
+unused_col: ~
+
+# Filtering
+rm_dup_inter: ~
+val_interval: ~
+filter_inter_by_user_or_item: True
+user_inter_num_interval: ~
+item_inter_num_interval: ~
+
+# Preprocessing
+alias_of_user_id: ~
+alias_of_item_id: ~
+alias_of_entity_id: ~
+alias_of_relation_id: ~
+preload_weight: ~
+normalize_field: ~
+
+biliteral: True

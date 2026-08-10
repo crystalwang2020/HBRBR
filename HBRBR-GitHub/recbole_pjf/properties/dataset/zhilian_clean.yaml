@@ -1,0 +1,49 @@
+# Atomic File Format
+field_separator: "\t"
+seq_separator: " "
+
+# Common Features
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: job_id
+#RATING_FIELD: rating
+#TIME_FIELD: timestamp
+DIRECT_FIELD: direct
+seq_len: ~
+# Label for Point-wise DataLoader
+LABEL_FIELD: label
+threshold:
+    label: 0.5
+# NegSample Prefix for Pair-wise DataLoader
+NEG_PREFIX: neg_
+# Text Model Needed
+USER_DOC_FIELD: user_doc
+ITEM_DOC_FIELD: job_doc
+
+# Selectively Loading
+load_col:
+    inter: [user_id, job_id, direct, label]
+    user: [user_id,metric0,metric1,metric2,metric3,metric4,metric5,metric6,metric7,metric8,metric9,metric10,metric11,metric12,metric13,metric14,metric15,metric16,metric17,metric18,metric19,metric20,metric21,metric22,metric23,metric24,metric25,metric26,metric27,metric28,metric29,metric30,metric31,metric32,metric33,metric34,metric35,metric36,metric37,metric38,metric39,metric40,metric41,metric42,metric43,metric44,metric45,metric46,metric47,metric48,metric49,metric50,metric51,metric52,metric53,metric54,metric55,metric56,metric57,metric58,metric59,metric60,metric61,metric62,metric63,metric64,metric65,metric66,metric67,metric68,metric69,metric70,metric71,metric72,metric73,metric74,metric75,metric76,metric77,metric78,metric79,metric80,metric81,metric82,metric83,metric84,metric85,metric86,metric87,metric88,metric89,metric90,metric91,metric92,metric93,metric94,metric95,metric96,metric97,metric98,metric99,metric100,metric101,metric102,metric103,metric104,metric105,metric106,metric107,metric108,metric109,metric110,metric111,metric112,metric113,metric114,metric115,metric116,metric117,metric118,metric119,metric120,metric121,metric122,metric123,metric124,metric125,metric126,metric127,metric128,metric129,metric130,metric131,metric132,metric133,metric134,metric135,metric136,metric137,metric138,metric139,metric140,metric141,metric142,metric143,metric144,metric145,metric146,metric147,metric148,metric149,metric150,metric151,metric152,metric153,metric154,metric155,metric156,metric157,metric158,metric159,metric160,metric161,metric162,metric163,metric164,metric165,metric166,metric167,metric168,metric169,metric170,metric171,metric172,metric173,metric174,metric175,metric176,metric177,metric178,metric179,metric180,metric181,metric182,metric183,metric184,metric185,metric186,metric187,metric188,metric189,metric190,metric191,metric192,metric193,metric194,metric195,metric196,metric197,metric198,metric199,metric200,metric201,metric202,metric203,metric204,metric205,metric206,metric207,metric208,metric209,metric210,metric211,metric212,metric213,metric214,metric215,metric216,metric217,metric218,metric219,metric220,metric221,metric222,metric223,metric224,metric225,metric226,metric227,metric228,metric229,metric230,metric231,metric232,metric233,metric234,metric235,metric236,metric237,metric238,metric239,metric240,metric241,metric242,metric243,metric244,metric245,metric246,metric247,metric248,metric249,metric250,metric251,metric252,metric253,metric254,metric255,metric256,metric257,metric258,metric259,metric260,metric261,metric262,metric263,metric264,metric265,metric266,metric267]
+#    user: [user_id, live_city_id, desire_jd_salary_id, cur_salary_id, cur_degree_id, birthday, start_work_date]
+    item: [job_id,metric0,metric1,metric2,metric3,metric4,metric5,metric6,metric7,metric8,metric9,metric10,metric11,metric12,metric13,metric14,metric15,metric16,metric17,metric18,metric19,metric20,metric21,metric22,metric23,metric24,metric25,metric26,metric27,metric28,metric29,metric30,metric31,metric32,metric33,metric34,metric35,metric36,metric37,metric38,metric39,metric40,metric41,metric42,metric43,metric44,metric45,metric46,metric47,metric48,metric49,metric50,metric51,metric52,metric53,metric54,metric55,metric56,metric57,metric58,metric59,metric60,metric61,metric62,metric63,metric64,metric65,metric66,metric67,metric68,metric69,metric70,metric71,metric72,metric73,metric74,metric75,metric76,metric77,metric78,metric79,metric80,metric81,metric82,metric83,metric84,metric85,metric86,metric87,metric88,metric89,metric90,metric91,metric92,metric93,metric94,metric95,metric96,metric97,metric98,metric99,metric100,metric101,metric102,metric103,metric104,metric105,metric106,metric107,metric108,metric109,metric110,metric111,metric112,metric113,metric114,metric115,metric116,metric117,metric118,metric119,metric120,metric121,metric122,metric123,metric124,metric125,metric126,metric127,metric128,metric129,metric130,metric131,metric132,metric133,metric134,metric135,metric136,metric137,metric138,metric139,metric140,metric141,metric142,metric143,metric144,metric145,metric146,metric147,metric148,metric149,metric150,metric151,metric152,metric153,metric154,metric155,metric156,metric157,metric158,metric159,metric160,metric161,metric162,metric163,metric164,metric165,metric166,metric167,metric168,metric169,metric170,metric171,metric172,metric173,metric174,metric175,metric176,metric177,metric178,metric179,metric180,metric181,metric182,metric183,metric184,metric185,metric186,metric187,metric188,metric189,metric190,metric191,metric192,metric193,metric194,metric195,metric196,metric197,metric198,metric199,metric200,metric201,metric202,metric203,metric204,metric205,metric206,metric207,metric208,metric209,metric210,metric211,metric212,metric213,metric214,metric215,metric216,metric217,metric218,metric219,metric220,metric221,metric222,metric223,metric224,metric225,metric226,metric227,metric228,metric229,metric230,metric231,metric232,metric233,metric234,metric235,metric236,metric237,metric238,metric239,metric240,metric241,metric242,metric243,metric244,metric245,metric246,metric247,metric248,metric249,metric250,metric251,metric252,metric253,metric254,metric255,metric256,metric257,metric258,metric259,metric260,metric261,metric262,metric263,metric264,metric265,metric266,metric267,metric268,metric269,metric270,metric271,metric272,metric273,metric274,metric275,metric276,metric277,metric278,metric279,metric280,metric281]
+#    item: [job_id, city, require_nums, max_salary, min_salary, start_date, end_date, is_travel]
+#    udoc: [user_id, user_doc]
+#    idoc: [job_id, job_doc]
+unload_col: ~
+unused_col: ~
+
+# Filtering
+rm_dup_inter: ~
+val_interval: ~
+filter_inter_by_user_or_item: True
+user_inter_num_interval: ~
+item_inter_num_interval: ~
+
+# Preprocessing
+alias_of_user_id: ~
+alias_of_item_id: ~
+alias_of_entity_id: ~
+alias_of_relation_id: ~
+preload_weight: ~
+normalize_field: ~
+
+biliteral: True

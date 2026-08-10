@@ -1,0 +1,4 @@
+﻿embedding_size: 64
+max_sent_num: 20
+max_sent_len: 30
+contrastive_temperature: 0.07

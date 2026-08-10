@@ -1,0 +1,21 @@
+﻿embedding_size: 64
+max_sent_num: 20
+max_sent_len: 30
+prediction_head: elem_mlp
+
+# BGNN parameters (shared with HBRBR)
+bgnn_weight_decay: 0.1
+bgnn_dropout: 0.3
+bgnn_batch_num_u: 8
+bgnn_batch_num_v: 8
+bgnn_layer_depth: 2
+bgnn_epochs: 1
+bgnn_learning_type: inference
+bgnn_dis_hidden_dim: 1
+# bgnn_device: cuda:0
+bgnn_batch_size: 100
+bgnn_v_attr_dimensions: 64
+bgnn_learning_rate: 0.001
+bgnn_u_num: 256
+bgnn_u_attr_dimensions: 64
+bgnn_v_num: 256
